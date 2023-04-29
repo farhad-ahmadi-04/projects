@@ -15,11 +15,13 @@ header div{
 text-align: center;
 }
 header #myImage{
-    background-color:  red;
-    height: 150px;
-    width: 150px;
+    width: 200px;
     border-radius: 50%;
     margin: 90px auto;
+}
+header #myImage img{
+    width: 100%;
+    border-radius: 100px;
 }
 main>.container{
     display: flex;
@@ -49,4 +51,17 @@ main a{
     bottom: 10px;
     margin-left: 8px;
    
+}
+main>.container img{
+    width: 80px;
+    /* height: 100px; */
+    border-radius: 20%;
+  /* transform: translate(50%,20%); */
+  position: absolute;
+  left: 100px;
+    top: 20px;
+    transition: all 1s;
+}
+main>.container div:hover img{
+   transform: translate(50%,20px);
 }
