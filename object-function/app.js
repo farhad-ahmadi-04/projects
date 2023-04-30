@@ -14,7 +14,7 @@ let school = [{
                         chemistry: 16,
                     },
                     totAvrage: {
-                        lasteExam: [16],
+                        lasteExam: 16,
                         lastAvrage: [14],
                     },
                 },
@@ -37,7 +37,7 @@ let school = [{
                         chemistry: 10,
                     },
                     totAvrage: {
-                        lasteExam: [11],
+                        lasteExam: 11,
                         lastAvrage: [11.66],
                     },
                 },
@@ -79,7 +79,7 @@ let school = [{
                         chemistry: 18,
                     },
                     totAvrage: {
-                        lasteExam: [15],
+                        lasteExam: 15,
                         lastAvrage: [16.66],
                     },
                 },
@@ -102,7 +102,7 @@ let school = [{
                         chemistry: 10,
                     },
                     totAvrage: {
-                        lasteExam: [10],
+                        lasteExam: 10,
                         lastAvrage: [11.25],
                     },
                 },
@@ -138,20 +138,13 @@ let school = [{
 
 function studensNumber(number = []) {
     studentSum = 0
+    // 
     for (let i = 0; i < number.length; i++) {
-        // studentSum += number[i].students.length
-        for (let j = 0; j < number[i].students.length; j++) {
-            // studentSum += number[i].students[j]
-            for (let k = 0; k < number[i].students[j].avrageScores.totAvrage.lasteExam.length; k++) {
-                studentSum =  number[i].students[j].avrageScores.totAvrage.lasteExam[k]
-                
-            }
-        }
+        studentSum += number[i].students.length
     }
-    console.log(studentSum);
     return studentSum
 }
-console.log(studensNumber(studentSum));
+
 console.log(studensNumber(school));
 
 
@@ -160,38 +153,40 @@ console.log(studensNumber(school));
 
 function avrageStu(avrage = []) {
     sum = 0
+    // for find class
     for (let i = 0; i < avrage.length; i++) {
-        // console.log(avrage[i]);
+        // for find scores
         for (let j = 0; j < avrage[i].students.length; j++) {
-            // console.log(avrage[i].students[j]);
-            for (let k = 0; k < avrage[i].students[j].avrageScores.totAvrage.lasteExam.length; k++) {
-                // console.log(avrage[i].students[j].avrageScores.totAvrage.lasteExam[k]);
-                sum = sum + avrage[i].students[j].avrageScores.totAvrage.lasteExam[k] 
-                sum1+=  avrage[i].students[j].avrageScores.totAvrage.lasteExam.length
-                // avrageStudentsSum =sum/ avrage[i].students[j].avrageScores.totAvrage.lasteExam.length
-            }
-
-            // console.log(avrage[i].students[j].avrageScores.totAvrage.lasteExam);
+            sum = sum + avrage[i].students[j].avrageScores.totAvrage.lasteExam
         }
 
     }
-    console.log(sum);
-    console.log(sum1);
+    console.log(sum/studensNumber(school));
 }
 avrageStu(school)
 
-// avrageStu(school)
+// 3.find max & min scores in school
 
-
-// function x(score = []) {
-//     numberSum = 0
+// function maxAndMin(score= []) {
+//     let maxScore= score[0]; let minScore= score[0]
 //     for (let i = 0; i < score.length; i++) {
-//         numberSum += score[i].students;
 //         for (let j = 0; j < score[i].students.length; j++) {
-//             numberSum += score[i].students[j].avrageScores.totAvrage.lastAvrage;
-//             numberSum = numberSum / studensNumber(school)
-//             console.log(numberSum);
+//            let value= score[i].students[j].avrageScores.totAvrage.lasteExam
+//         if (minScore > score[i].students[j].avrageScores.totAvrage.lasteExam) {
+//             minScore= value
+          
+//         }  else if (minScore < score[i].students[j].avrageScores.totAvrage.lasteExam) {
+//             maxScore= value
+//         }else{
+//             maxScore=maxScore
+//             minScore=minScore
 //         }
+        
+//        }
+//         console.log(minScore);
+//         console.log(maxScore);
 //     }
 // }
-// x(school)
+// maxAndMin(school)
+
+
