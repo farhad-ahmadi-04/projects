@@ -14,7 +14,7 @@ let school = [{
                         chemistry: 16,
                     },
                     totAvrage: {
-                        lasteExam: 16,
+                        lasteExam: 13,
                         lastAvrage: [14],
                     },
                 },
@@ -138,7 +138,7 @@ let school = [{
 
 function studensNumber(number = []) {
     studentSum = 0
-    // 
+    // peymayesh class.....
     for (let i = 0; i < number.length; i++) {
         studentSum += number[i].students.length
     }
@@ -153,7 +153,7 @@ console.log(studensNumber(school));
 
 function avrageStu(avrage = []) {
     sum = 0
-    // for find class
+    // peydayesh class
     for (let i = 0; i < avrage.length; i++) {
         // for find scores
         for (let j = 0; j < avrage[i].students.length; j++) {
@@ -161,32 +161,36 @@ function avrageStu(avrage = []) {
         }
 
     }
-    console.log(sum/studensNumber(school));
+    console.log(sum / studensNumber(school));
 }
 avrageStu(school)
 
 // 3.find max & min scores in school
 
-// function maxAndMin(score= []) {
-//     let maxScore= score[0]; let minScore= score[0]
-//     for (let i = 0; i < score.length; i++) {
-//         for (let j = 0; j < score[i].students.length; j++) {
-//            let value= score[i].students[j].avrageScores.totAvrage.lasteExam
-//         if (minScore > score[i].students[j].avrageScores.totAvrage.lasteExam) {
-//             minScore= value
-          
-//         }  else if (minScore < score[i].students[j].avrageScores.totAvrage.lasteExam) {
-//             maxScore= value
-//         }else{
-//             maxScore=maxScore
-//             minScore=minScore
-//         }
-        
-//        }
-//         console.log(minScore);
-//         console.log(maxScore);
-//     }
-// }
-// maxAndMin(school)
+function maxAndMin(score = []) {
+    let maxScore = score[0].students[0].avrageScores.totAvrage.lasteExam;
+    let minScore = score[0].students[0].avrageScores.totAvrage.lasteExam
+    // peymayesh class
+    for (let i = 0; i < score.length; i++) {
+        // peymayesh student
+        for (let j = 0; j < score[i].students.length; j++) {
+            let studentScore = score[i].students[j];
+            if (minScore > studentScore.avrageScores.totAvrage.lasteExam) {
+                minScore = studentScore.avrageScores.totAvrage.lasteExam
+                console.log(minScore);
+            } else if (maxScore < studentScore.avrageScores.totAvrage.lasteExam) {
+                maxScore = studentScore.avrageScores.totAvrage.lasteExam
+            } else {
+                minScore = minScore
+                maxScore = maxScore
+            }
+            // condition for find max &min
 
+        }
 
+    }
+    console.log('less score is>>>' + minScore);
+    console.log("top score is>>>" + maxScore);
+    // return studentScore
+}
+maxAndMin(school)
