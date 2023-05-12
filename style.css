@@ -1,71 +1,69 @@
-body{
+body {
     margin: 0;
     background-color: rgb(216, 216, 215);
     font-family: 'Courier New', Courier, monospace
 }
-.container{
+
+.container {
     width: 1200px;
     margin: 0 auto;
 }
-header{
-font-size: 50px;
-font-weight: bold;
+
+header {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
-header div{
-text-align: center;
+
+header div {
+    text-align: center;
 }
-header #myImage{
+
+header #myImage {
     width: 200px;
     border-radius: 50%;
     margin: 90px auto;
 }
-header #myImage img{
+
+header #myImage img {
     width: 100%;
     border-radius: 100px;
 }
-main>.container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
+header a{
+    text-decoration: none;
+    transition: all .5s;
 }
-main>.container>div{
-    position: relative;
-    width: 280px;
-    height: 200px;
-    background: linear-gradient( rgb(13, 182, 97) 70%, #2464 100%);
-    border-radius: 10% 0 10% 0;
+header a:hover{
+    font-size: 70px;
+    color: rgb(153, 63, 78);
+}
+main>.container {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+main>.container>div {
+   box-shadow: 0px 10px 300px 0px rgb(194, 194, 179);
+   border-radius: 10%;
+}
+
+main>.container>div>a:hover {
+    border-radius: 100%
+}
+
+main a {
+    text-align: center;
+    display: block;
+    margin: 50px;
     transition: all 1s;
-    margin-left: 30px;
-}
-main>.container>div:hover{
-    width: 350px;
-    height: 250px;
-    z-index: 1;
-    border-radius: 0 10% 0 10%
-}
-main a{
+    border-radius: 10% 0 10% 0;
+    background: linear-gradient(rgb(13, 181, 97) 50%, rgba(6, 244, 22, 0.267) 100%);
     color: #fff;
     font-size: 30px;
     text-decoration: none;
     font-style: italic;
     font-weight: bold;
-    position: absolute;
-    bottom: 10px;
-    margin-left: 8px;
-   
-}
-main>.container img{
-    width: 80px;
-    /* height: 100px; */
-    border-radius: 20%;
-  /* transform: translate(50%,20%); */
-  position: absolute;
-  left: 100px;
-    top: 20px;
-    transition: all 1s;
-}
-main>.container div:hover img{
-   transform: translate(50%,20px);
+    padding: 40px;
 }
