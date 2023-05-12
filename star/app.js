@@ -86,9 +86,9 @@ function practiceFour(row, col) {
         // peymayesh col in row
         for (let j = 1; j <= col; j++) {
             if (i + j >= col) {
-                 document.write(j + '🐱‍👤 ')
+                document.write(j + '🐱‍👤 ')
             } else {
-                 document.write(' ')
+                document.write(' ')
             }
         }
         document.write('<br />')
