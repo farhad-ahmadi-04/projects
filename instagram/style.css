@@ -1,0 +1,133 @@
+/* In the rainbow God */
+body {
+    background-color: #eee;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.main-left,
+.main-right {
+    
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+.main-right div{
+    margin-bottom:  15px; ;
+}
+.main-left{
+    width: 58%;
+}
+.main-right{
+    width: 41% ;
+}
+.main-left img{
+    padding-top: 30px ;
+}
+
+/* start register-firm in the main-rigt */
+
+/* we add siwtch-page here for make our code shorter */
+.register-form, .siwtch-page {
+    border: 1px solid rgb(206, 202, 202);
+    padding: 50px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.register-form p:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(172, 169, 169);
+}
+.register-form form input {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(160, 159, 159);
+    background-color: #eee;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    outline: none;
+
+}
+.register-form form input:last-of-type {
+    background-color: rgb(119, 119, 252);
+    color: rgb(240, 240, 240);
+    margin-top: 20px;
+}
+.main-left img {
+    width: 100%;
+}
+.register-form img {
+    width: 200px;
+    text-align: center;
+}
+.register-form p a {
+    color: rgb(120, 119, 119);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+.register-form p:last-of-type{
+    color: rgb(136, 133, 133);
+}
+
+
+/* register-form End */
+
+
+/* siwtch-page start */
+
+.siwtch-page{
+    padding: 30px;
+}
+.siwtch-page a{
+    text-decoration: none;
+}
+/* app-links start */
+
+.app-links img:first-of-type {
+    width: 140px;
+}
+.app-links img:last-of-type{
+    width: 120px;
+}
+
+
+/* footer start */
+
+
+.footer{
+    font-weight: 100%;
+}
+
+.footer div{
+    text-align: center;
+}
+.footer a{
+    margin: 10px;
+    color: rgb(124, 122, 122);
+    text-decoration: none;
+}
+.footer-top{
+    margin-bottom: 10px;
+}
+.footer-center{
+    margin-bottom: 10px;
+}
+.footer-bottem span{
+    color: rgb(139, 135, 135);
+}
+/* footerEnd */
+
+
+/* FiNiSh */
