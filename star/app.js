@@ -54,19 +54,22 @@ document.write("<br />")
 // *
 
 function prac6ticeThree(n) {
-    for (let row = 1; row <= n; row++) {
+    for (let row = 0; row < 2 * n; row++) {
+        // agar shart dorost bashad moadeleh ro hesab kon agar ham n c=row gharar bedeh.
+        // ?====shart....amalgar sharti
+        let c = row > n ? 2 * n - row : row;
         // peymayesh col in row
-        for (let col = 1; col <= row; col++) {
+        for (let col = 1; col <= c; col++) {
             document.write(col + "🎈 ");
         }
         document.write('<br />')
     }
-    for (let row = 1; row <= n; row++) {
-        for (let col = 1; col <= n - row; col++) {
-            document.write(col + "🎈 ")
-        }
-        document.write('<br />')
-    }
+    // for (let row = 1; row <= n; row++) {
+    //     for (let col = 1; col <= n - row; col++) {
+    //         document.write(col + "🎈 ")
+    //     }
+    //     document.write('<br />')
+    // }
 }
 prac6ticeThree(5)
 
@@ -95,3 +98,61 @@ function practiceFour(row, col) {
     }
 }
 practiceFour(5, 5)
+
+
+document.write("practiceFive" + "=======")
+document.write('<br />')
+// practice5
+//     *
+//    * *
+//   * * *
+//  * * * *
+//   * * *
+//    * *
+//     *
+
+function practiceFive(n) {
+    for (let row = 0; row < 2 * n; row++) {
+        let c = row > n ? 2 * n - row : row;
+
+        let space = n - c
+        for (let s = 0; s < space; s++) {
+            document.write("....")
+        }
+        for (let col = 1; col <= c; col++) {
+            document.write(" " + col + "🤷‍♂️")
+
+        }
+        document.write('<br />')
+    }
+}
+
+practiceFive(5)
+
+
+document.write("practiceSix" + "=======")
+document.write('<br />')
+// practice6
+//     *
+//    * *
+//   * * *
+//  * * * *
+
+function practiceSix(n) {
+    for (let row = 1; row <= n; row++) {
+        let freeSpace = n-row
+        for (let s = 0; s < freeSpace; s++) {
+            document.write("...")
+            // console.log("   ");
+        }
+
+        for (let col = 1; col <= row; col++) {
+            document.write(col + "💋")
+            // console.log(col+" ");
+        }
+        document.write("<br />")
+        // console.log("\n");
+    }
+}
+
+practiceSix(5)
